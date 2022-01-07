@@ -5,6 +5,7 @@
 //#include "stdio.h"  写不写都可以
 #include <iostream>
 
+using namespace std;
 #pragma warning(disable : 4996) //让编译器忽略一些警告信息，从而让我们可以正常使用scanf()等函数
 
 int main()
@@ -39,6 +40,9 @@ int main()
 	}
 	{
 		char str1[10] = "hello!";
+        cout << "str1:" << str1 << endl;
+        cout << "&str1:" << &str1 << endl;
+        cout << "*str1:" << *str1 << endl;
 		printf("%d\n", str1);  //11532676,这里加不加&结果一样，这说明str和&str被系统等同看待。
 		printf("%d\n", &str1); //11532676
 		int i;
